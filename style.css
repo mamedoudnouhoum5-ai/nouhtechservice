@@ -1,0 +1,366 @@
+/* =========================================================
+   THÈME : CYBER-TECH MODERN & PREMIUM
+   NOUHOUM DIGITAL SERVICES - BAFILO
+   ========================================================= */
+
+:root {
+    --primary-gradient: linear-gradient(135deg, #4f46e5 0%, #06b6d4 100%);
+    --primary-color: #4f46e5;       /* Indigo Électrique */
+    --secondary-color: #06b6d4;     /* Cyan / Néon */
+    --accent-gold: #f59e0b;         /* Ambre / Or */
+    --accent-green: #10b981;        /* Vert Menthe */
+    --accent-red: #ef4444;          /* Rouge Promo */
+    
+    --bg-main: #f1f5f9;             /* Fond ultra-doux */
+    --bg-card: #ffffff;             /* Cartes blanc pur */
+    --text-heading: #0f172a;        /* Titres foncés clairs */
+    --text-body: #334155;           /* Texte lisible */
+    --border-color: #e2e8f0;
+}
+
+/* --- RESET & TYPOGRAPHIE --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-body);
+    line-height: 1.6;
+}
+
+/* --- EN-TÊTE FUTURISTE & CHIC --- */
+.navbar {
+    background: #090d16;
+    border-bottom: 2px solid rgba(6, 182, 212, 0.3);
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+.brand-block {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 1.35rem;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #ffffff, var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.logo span {
+    color: var(--accent-gold);
+    -webkit-text-fill-color: initial;
+}
+
+/* BARRE DE RECHERCHE DYNAMIQUE */
+.search-container {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 30px;
+    padding: 3px;
+    transition: all 0.3s ease;
+}
+
+.search-container:focus-within {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 10px rgba(6, 182, 212, 0.4);
+}
+
+.search-input {
+    border: none;
+    background: transparent;
+    color: #fff;
+    padding: 6px 14px;
+    outline: none;
+    font-size: 0.88rem;
+}
+
+.search-btn {
+    background: var(--primary-gradient);
+    color: #fff;
+    border: none;
+    padding: 6px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.search-btn:hover {
+    transform: scale(1.05);
+}
+
+/* NAVIGATION */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+}
+
+.nav-links a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.nav-links a.active, .nav-links a:hover {
+    color: #fff;
+    background: var(--primary-gradient);
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+/* --- SECTION HÉROS (BANNIÈRE DE BIENVENUE) --- */
+.hero-section {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 40px 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--border-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: var(--primary-gradient);
+}
+
+.hero-section h1 {
+    color: var(--text-heading);
+    font-size: 2.3rem;
+    font-weight: 800;
+}
+
+/* --- TITRES DE SECTIONS --- */
+.container {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 25px 15px;
+}
+
+.page-title {
+    text-align: center;
+    color: var(--text-heading);
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+
+.section-title {
+    color: var(--primary-color);
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin: 35px 0 20px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.section-title::after {
+    content: '';
+    flex: 1;
+    height: 2px;
+    background: linear-gradient(90deg, var(--border-color), transparent);
+}
+
+/* --- CARTES DE SERVICE STYLE NEUMORPHIC / MODERN --- */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.service-card {
+    background: var(--bg-card);
+    border-radius: 16px;
+    padding: 24px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--secondary-color);
+    box-shadow: 0 15px 30px rgba(6, 182, 212, 0.15);
+}
+
+.service-card h3 {
+    color: var(--text-heading);
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+.card-img-container img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin: 15px 0;
+}
+
+/* --- AFFICHAGE DES PRIX --- */
+.price-tag {
+    background: #f8fafc;
+    border: 1px dashed var(--secondary-color);
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #94a3b8;
+    margin-right: 8px;
+}
+
+.new-price {
+    color: var(--accent-red);
+    font-weight: 800;
+    font-size: 1.1rem;
+}
+
+/* --- BOUTONS D'ACTION ÉLÉGANTS --- */
+.btn {
+    padding: 12px 24px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: var(--primary-gradient);
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(79, 70, 229, 0.3);
+}
+
+.btn-primary:hover {
+    box-shadow: 0 6px 20px rgba(79, 70, 229, 0.5);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background: #334155;
+    color: #fff;
+}
+
+.btn-call {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+}
+
+.btn-call:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
+}
+
+/* --- BOUTON FLOTTANT WHATSAPP NÉON --- */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 25px;
+    right: 25px;
+    background: #25d366;
+    color: #FFF;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.15) rotate(10deg);
+}
+
+/* --- FOOTER SOMBRE ET ÉLÉGANT --- */
+footer {
+    background: #090d16;
+    color: #64748b;
+    text-align: center;
+    padding: 35px 20px;
+    margin-top: 60px;
+    font-size: 0.88rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+footer p {
+    margin-bottom: 8px;
+}
+
+/* --- OPTIMISATION MOBILE --- */
+@media (max-width: 768px) {
+    .menu-toggle { display: block; }
+    
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 15px;
+        background: #0f172a;
+        padding: 20px;
+        border-radius: 12px;
+        border: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    .nav-links.show { display: flex; }
+    
+    .brand-block {
+        width: 100%;
+        justify-content: space-between;
+        margin-bottom: 12px;
+    }
+}
